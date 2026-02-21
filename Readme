@@ -1,3 +1,4 @@
 Updated the OICD connection information on terraform cloud.
 Updated the OICD connection information on terraform cloud.
 Validating terraform.io sub parameters using wildcard
+Used of StringEquals with wildcard will fail, rather use StringLike. Testing StringLike on trust policy.
