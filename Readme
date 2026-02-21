@@ -2,3 +2,17 @@ Updated the OICD connection information on terraform cloud.
 Updated the OICD connection information on terraform cloud.
 Validating terraform.io sub parameters using wildcard
 Used of StringEquals with wildcard will fail, rather use StringLike. Testing StringLike on trust policy.
+
+TakeAways:
+1. Role and OIDC provider are in same account
+
+2. aud matches exactly
+
+3. sub is copied EXACTLY
+
+4. Use StringLike for run_phase
+"StringLike": {
+  "app.terraform.io:sub": "organization:Enterpriseair-Cloud:workspace:awsInfraGovernance:run_phase:*"
+}
+
+5. Never hardcode only apply
